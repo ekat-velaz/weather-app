@@ -182,9 +182,14 @@ body {
   display: grid;
   grid-auto-flow: column;
   place-items: center;
-  padding: 30px;
+  padding: 20px;
   color: var(--darkBlue);
   font-size: 38px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+}
+
+#header-text {
+  text-align: center;
 }
 
 #header-text::before {
@@ -204,6 +209,7 @@ body {
   padding: 10px;
   color: var(--darkBlue);
   font-size: 18px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 50%);
 }
 
 #github-link::before {
@@ -224,6 +230,8 @@ a {
   justify-items: center;
   gap: 30px;
   width: 100vw;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* Weather container styling */
@@ -232,12 +240,13 @@ a {
   background-color: var(--transparentDarkBlue);
   padding: 20px;
   display: grid;
-  gap: 20px;
+  gap: 10px;
   place-items: center;
   font-size: 18px;
   color: var(--biege);
   border-radius: 8px;
   width: 80%;
+  box-shadow: 0 0 5px rgb(0 0 0 / 50%);
 }
 
 #main-weather {
@@ -278,6 +287,7 @@ a {
   border-radius: 8px;
   padding: 10px;
   place-items: center;
+  box-shadow: 0 0 5px rgb(0 0 0 / 50%);
 }
 
 /* Input styling */
@@ -285,7 +295,6 @@ a {
 #search-btn::before {
   font-family: fontAwesome;
   content: "\f002";
-
   color: var(--darkBlue);
 }
 
@@ -299,6 +308,7 @@ a {
   border-radius: 15px;
   padding-left: 10px;
   font-size: 16px;
+  box-shadow: inset 0 0 5px rgb(0 0 0 / 50%);
 }
 
 #input:hover,
