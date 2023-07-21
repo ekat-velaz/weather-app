@@ -1,5 +1,3 @@
-import APIkey from "./APIkey";
-
 const weather = (() => {
   function convertData(data) {
     const {

@@ -11,6 +11,21 @@ const webpage = (() => {
     footerContainer.appendChild(githubLink);
   }
 
+  // function switchBtn() {
+  //   const toggleBtn = document.getElementById('toggle-btn');
+
+  // }
+
+  const toggleBtn = document.getElementById("toggle-btn");
+  let tempStatus = "C";
+  toggleBtn.addEventListener("click", () => {
+    if (tempStatus === "C") {
+      tempStatus = "F";
+    } else if (tempStatus === "F") {
+      tempStatus = "C";
+    }
+  });
+
   function showWeather(weatherData) {
     if (!weatherData) {
       return;
@@ -28,11 +43,17 @@ const webpage = (() => {
     city.textContent = `${weatherData.cityName},`;
     country.textContent = `${weatherData.countryName}`;
     conditionState.textContent = `${weatherData.conditionState}`;
-    temperature.textContent = `${weatherData.temperatureC}°C`;
     wind.textContent = `${weatherData.windSpeed}k/hm`;
     humidity.textContent = `${weatherData.humidityData}%`;
-    feelsLike.textContent = `${weatherData.feelsLikeC}°C`;
     icon.src = `${weatherData.weatherIcon}`;
+
+    if (tempStatus === "C") {
+      temperature.textContent = `${weatherData.temperatureC}°C`;
+      feelsLike.textContent = `${weatherData.feelsLikeC}°C`;
+    } else if (tempStatus === "F") {
+      temperature.textContent = `${weatherData.temperatureF}°F`;
+      feelsLike.textContent = `${weatherData.feelsLikeF}°F`;
+    }
   }
 
   return { showWeather, createFooterContent };

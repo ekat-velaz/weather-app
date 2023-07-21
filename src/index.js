@@ -20,3 +20,9 @@ searchButton.addEventListener("click", (e) => {
   }
   generateWeather(searchInput.value);
 });
+
+const city = document.getElementById("city");
+const toggleBtn = document.getElementById("toggle-btn");
+toggleBtn.addEventListener("click", () => {
+  generateWeather(city.textContent);
+});
