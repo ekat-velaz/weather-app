@@ -1,10 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-  <script defer src="main.4261948cc7c4b3d39cca.js"></script><script defer src="main.1ed419ab5a7abf019bb2.js"></script></head>
-  <body></body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <script defer src="main.b8b149566bb81f124a14.js"></script><script defer src="main.8df44f9b556f8998dd31.js"></script></head>
+  <body>
+    <div id="content">
+      <header id="header">
+        <div id="header-text">Weather App</div>
+      </header>
+      <main id="main">
+        <form action="" id="search">
+          <input type="text" id="input" />
+          <button type="submit" id="search-btn"></button>
+        </form>
+        <div id="weather-container">
+          <div id="main-weather">
+            <div id="location">
+              <div id="city">Moscow,</div>
+              <div id="country">Russia</div>
+            </div>
+            <div id="icon-container">
+              <img src="" alt="" id="icon" />
+            </div>
+            <div id="condition-state"></div>
+          </div>
+          <div id="weather-info">
+            <div class="info-item">
+              <div class="info-header">Temperature</div>
+              <div class="info-text" id="temperature"></div>
+            </div>
+            <div class="info-item">
+              <div class="info-header">Wind</div>
+              <div class="info-text" id="wind"></div>
+            </div>
+            <div class="info-item">
+              <div class="info-header">Humidity</div>
+              <div class="info-text" id="humidity"></div>
+            </div>
+            <div class="info-item">
+              <div class="info-header">Feels like</div>
+              <div class="info-text" id="feels-like"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer id="footer">
+        <div id="footer-text"></div>
+      </footer>
+    </div>
+  </body>
 </html>
