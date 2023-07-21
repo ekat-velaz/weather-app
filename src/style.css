@@ -143,10 +143,10 @@ input[type="reset"] {
 }
 
 /* General space styling */
-/* @font-face {
-    font-family: "Oswald" ;
-    src: url(/src/Oswald/Oswald-VariableFont_wght.ttf);
-} */
+@font-face {
+  font-family: "Quicksand";
+  src: url(/src/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
 
 :root {
   --darkBlue: #27374d;
@@ -156,7 +156,8 @@ input[type="reset"] {
   --transparentDarkBlue: #27374d76;
   --transparentBlue: #526d827c;
   --transparentLightBlue: #9db2bf71;
-  --transparentBiege: #dde6ed7b /* font-family: "Oswald"; */;
+  --transparentBiege: #dde6ed7b;
+  font-family: "Quicksand";
 }
 
 body {
