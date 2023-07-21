@@ -1,0 +1,306 @@
+/* Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* General space styling */
+/* @font-face {
+    font-family: "Oswald" ;
+    src: url(/src/Oswald/Oswald-VariableFont_wght.ttf);
+} */
+
+:root {
+  --darkBlue: #27374d;
+  --blue: #526d82;
+  --lightBlue: #9db2bf;
+  --biege: #dde6ed;
+  --transparentDarkBlue: #27374d76;
+  --transparentBlue: #526d827c;
+  --transparentLightBlue: #9db2bf71;
+  --transparentBiege: #dde6ed7b /* font-family: "Oswald"; */;
+}
+
+body {
+  height: 100vh;
+  background-image: url(/src/images/sky-default.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#content {
+  height: 100%;
+  display: grid;
+  align-content: space-between;
+  /* background-color: var(--lightBlue); */
+}
+
+/* Header styling */
+#header {
+  background-color: var(--transparentBlue);
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  padding: 30px;
+  color: var(--darkBlue);
+  font-size: 38px;
+}
+
+#header-text::before {
+  font-family: fontAwesome;
+  content: "\f0c2";
+  padding-right: 10px;
+}
+
+/* Footer styling */
+#footer {
+  background-color: var(--transparentDarkBlue);
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  color: var(--darkBlue);
+  font-size: 18px;
+}
+
+#github-link::before {
+  font-family: fontAwesome;
+  content: "\f092";
+  font-size: 42px;
+  color: var(--darkBlue);
+}
+
+a {
+  color: var(--darkBlue);
+  text-decoration: none; /* no underline */
+}
+
+/* Main styling */
+#main {
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+  width: 100vw;
+}
+
+/* Weather container styling */
+
+#weather-container {
+  background-color: var(--transparentDarkBlue);
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  place-items: center;
+  font-size: 18px;
+  color: var(--biege);
+  border-radius: 8px;
+  width: 80%;
+}
+
+#main-weather {
+  display: grid;
+  gap: 10px;
+  place-items: center;
+}
+
+#location {
+  display: grid;
+  grid-auto-flow: column;
+  font-size: 24px;
+  gap: 5px;
+}
+
+#icon {
+  width: 100px;
+}
+
+#condition-state {
+  font-size: 24px;
+}
+
+#weather-info {
+  display: grid;
+  /* grid-auto-flow: column; */
+  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  font-size: 14px;
+  width: 70%;
+}
+
+.info-item {
+  display: grid;
+  gap: 5px;
+  background-color: var(--transparentBlue);
+  border-radius: 8px;
+  padding: 10px;
+  place-items: center;
+}
+
+/* Input styling */
+
+#search-btn::before {
+  font-family: fontAwesome;
+  content: "\f002";
+
+  color: var(--darkBlue);
+}
+
+#input {
+  height: 30px;
+  width: 150px;
+  background-color: var(--transparentBlue);
+  color: var(--biege);
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+#input:hover,
+#input:focus {
+  background-color: var(--blue);
+}
